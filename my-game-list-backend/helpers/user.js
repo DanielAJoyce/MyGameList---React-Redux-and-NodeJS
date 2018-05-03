@@ -28,6 +28,8 @@ exports.registerUser = function(req,res){
           user.save(function(err){
             if(err){
               console.log(err);
+            }else{
+              res.status(201).json({message:"User has been created. Please log in with the credentials you have provided!"});
             }
           });
         });
@@ -37,6 +39,7 @@ exports.registerUser = function(req,res){
     res.json({error:"Username and/or password have not been given"})
   }
 }
+
 
 
 exports.authenticateUser = function(req,res){

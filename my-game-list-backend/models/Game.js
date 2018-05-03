@@ -5,7 +5,8 @@ var GameSchema = Schema({
     name:String,
     singulargameid:{
         type:Schema.Types.ObjectId,
-        ref:"RealGame"
+        ref:"RealGame",
+        unique:true
     },
     platformsOwned:[
         {
@@ -15,11 +16,9 @@ var GameSchema = Schema({
     state:{
         type:String
     },
-    owner:{
-        id:{
+    ownerid:{
             type:Schema.Types.ObjectId,
             ref:"User"
-        }
     }
 });
 

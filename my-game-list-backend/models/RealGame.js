@@ -3,6 +3,10 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 var RealGameSchema = Schema({
+    realgameid:{
+        type:Number,
+        unique:true
+    },
     name:String,
     yearofrelease:Number,
     platforms:[
