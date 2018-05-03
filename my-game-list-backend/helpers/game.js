@@ -5,8 +5,25 @@ var mongoose = require("mongoose");
 
 exports.getAllGamesUserOwns = function(req,res){
   console.log("This is the route for all of the users games");
+    if(req.headers.token){
 
+      var decoded =  jwt.decode(req.headers.token, {complete:true});
+      var userId = decoded.payload.userid;
 
+      console.log("HI");
+      db.Game.find({ownerid:userId}, function(err,foundGames){
+
+        if(err){
+          throw err;
+        }else{
+          foundGames.forEach(function(game){
+            console.log(game);
+          })
+          res.status(200).json({games:foundGames});
+        }
+        
+      })
+    }
 }
 exports.deleteGameFromList = function(req,res){
   console.log("Route for deleting a game from list");
@@ -21,7 +38,7 @@ exports.addGameToList = function(req,res){
 
   var singularGameId = req.params.gameid;
   
-  var userToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI1YWU3MGZiYzY2YzU0YjA4MTRhYzVlZjgiLCJpYXQiOjE1MjUyNjM1NTcsImV4cCI6MTUyNTM0OTk1N30.rb_qEk7yMVaq35dlCVqvx-ktzr9iJXFfC8iMelNqBI4";
+  var userToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI1YWViN2M2ZjI4ZmI1OTFlOGMwNzI0ZWUiLCJpYXQiOjE1MjUzODI1NzcsImV4cCI6MTUyNTQ2ODk3N30.VdjZZ31MTVT-zsrqls-zr6VaB-WAL3RrviI-E0mWZaA";
   userId = jwt.decode(userToken, {complete:true});
   userId = userId.payload.userid;
 

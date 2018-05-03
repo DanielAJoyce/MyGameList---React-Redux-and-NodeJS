@@ -49,7 +49,7 @@ function getGames(){
         genre:["Action-adventure"],
         developer:"Naughty Dog",
         publisher:"Sony",
-        realgameid:2
+        realgameid:3
     },
     {
         name:"Fallout 4",
@@ -59,7 +59,7 @@ function getGames(){
         genre:["Action","RPG"],
         developer:"Naughty Dog",
         publisher:"Sony",
-        realgameid:3        
+        realgameid:4
     },
     {
         name:"Call of Duty: WWII",
@@ -69,7 +69,7 @@ function getGames(){
         genre:["First-Person Shooter"],
         developer:"Treyarch",
         publisher:"Activision",
-        realgameid:4        
+        realgameid:5
     },
     {
         name:"EA Sports UFC",
@@ -79,7 +79,7 @@ function getGames(){
         genre:["Fighting", "sport"],
         developer:"EA",
         publisher:"EA",
-        realgameid:5
+        realgameid:6
     },
     {
         name:"Far Cry 5",
@@ -89,7 +89,7 @@ function getGames(){
         genre:["Fist-Person Shooter"],
         developer:"Ubisoft",
         publisher:"Ubisoft",
-        realgameid:6        
+        realgameid:7        
     },
     {
         name:"Grand Theft Auto V",
@@ -99,7 +99,7 @@ function getGames(){
         genre:["Action"],
         developer:"Rockstar Games",
         publisher:"Rockstar Games",
-        realgameid:7        
+        realgameid:8        
     },
     {
         name:"Tekken 7",
@@ -109,7 +109,7 @@ function getGames(){
         genre:["Fighting"],
         developer:"Ubisoft",
         publisher:"Ubisoft",
-        realgameid:8        
+        realgameid:9        
     },
     {
         name:"Dark Souls 3",
@@ -119,7 +119,7 @@ function getGames(){
         genre:["Action", "Adventure"],
         developer:"From Software",
         publisher:"Bandai Namco",
-        realgameid:9        
+        realgameid:10        
     },
     {
         name:"Super Mario Odyssey",
@@ -129,7 +129,7 @@ function getGames(){
         genre:["Platformer"],
         developer:"Nintendo",
         publisher:"Nintendo",
-        realgameid:10        
+        realgameid:11       
     },
     {
         name:"The Legend of Zelda: Breath of the Wild",
@@ -139,7 +139,7 @@ function getGames(){
         genre:["Action","Adventure"],
         developer:"Nintendo",
         publisher:"Nintendo",
-        realgameid:11        
+        realgameid:12        
     },
     {
         name:"Overwatch",
@@ -149,7 +149,7 @@ function getGames(){
         genre:["First-Person Shooter"],
         developer:"Blizzard",
         publisher:"Blizzard",
-        realgameid:12        
+        realgameid:13        
     },
     ]
 }
