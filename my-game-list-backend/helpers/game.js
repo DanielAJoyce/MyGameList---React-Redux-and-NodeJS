@@ -27,6 +27,26 @@ exports.getAllGamesUserOwns = function(req,res){
 }
 exports.deleteGameFromList = function(req,res){
   console.log("Route for deleting a game from list");
+  console.log(req.params.gameid);
+  console.log(req.headers.token);
+  if(req.params.gameid && req.headers.token)
+  {
+    console.log(req.params);
+    var gameId = req.params.gameid;
+    
+    var decoded =  jwt.decode(req.headers.token, {complete:true});
+    var userId = decoded.payload.userid;
+
+    db.Game.deleteOne({ownerid:userId, _id:gameId}, function(err){
+      if(err){
+        console.log(err);
+        throw err;
+      }else{
+        console.log("game deleted");
+        res.status(200).json({message:"Game deleted from list"});
+      }
+    })
+  }
 }
 
 function getUserIdFromToken(){
