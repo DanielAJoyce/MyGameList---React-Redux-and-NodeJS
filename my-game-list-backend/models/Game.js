@@ -5,8 +5,7 @@ var GameSchema = Schema({
     name:String,
     singulargameid:{
         type:Schema.Types.ObjectId,
-        ref:"RealGame",
-        unique:true
+        ref:"RealGame"
     },
     platformsOwned:[
         {
